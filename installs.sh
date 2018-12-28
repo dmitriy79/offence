@@ -88,6 +88,8 @@ mkdir ~/Desktop/set-up/enum
 cd ~/Desktop/set-up/enum
 
 git clone https://github.com/rebootuser/LinEnum.git
+git clone https://github.com/AlessandroZ/BeRoot.git
+git clone https://github.com/jondonas/linux-exploit-suggester-2.git
 git clone https://github.com/sleventyeleven/linuxprivchecker.git
 
 #SMB Enum tool
