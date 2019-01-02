@@ -55,6 +55,7 @@ cd ~/Desktop/set-up/priv-esc
 #so 'should' run on every Windows version since Windows 7.
 git clone https://github.com/411Hall/JAWS.git
 
+git clone https://github.com/DominicBreuker/pspy.git
 
 mkdir ~/Desktop/set-up/exploit
 cd ~/Desktop/set-up/exploit
