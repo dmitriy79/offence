@@ -13,27 +13,29 @@ apt-get install -y libreoffice
 apt-get install -y exiftool
 
 
-mkdir ~/Desktop/set-up
-cd ~/Desktop/set-up
+mkdir ~/Desktop/installs
+cd ~/Desktop/installs
 
-mkdir networking
-cd networking
 git clone https://github.com/CoreSecurity/impacket.git
 
-mkdir ~/Desktop/set-up/utils
-cd ~/Desktop/set-up/utils
-
-git clone https://github.com/skelsec/pykerberoast.git
-git clone https://github.com/FuzzySecurity/PowerShell-Suite.git
+mkdir ~/Desktop/installs/wordlist
+cd ~/Desktop/installs/wordlist
 
 #Sharepoint and much more word lists
 git clone https://github.com/danielmiessler/SecLists.git
+
+mkdir ~/Desktop/installs/steg
+cd ~/Desktop/installs/steg
 
 #Steg brute force stuff
 git clone https://github.com/Va5c0/Steghide-Brute-Force-Tool.git
 pip install progressbar
 sudo curl https://raw.githubusercontent.com/Paradoxis/StegCracker/master/stegcracker > /bin/stegcracker
 sudo chmod +x /bin/stegcracker
+
+
+mkdir ~/Desktop/installs/Windows
+cd ~/Desktop/installs/Windows
 
 #Shells for powershell and such
 git clone https://github.com/samratashok/nishang.git
@@ -43,55 +45,11 @@ git clone https://github.com/samratashok/nishang.git
 #following modules and scripts
 git clone https://github.com/PowerShellMafia/PowerSploit.git
 
+git clone https://github.com/skelsec/pykerberoast.git
+git clone https://github.com/FuzzySecurity/PowerShell-Suite.git
 
-mkdir ~/Desktop/set-up/shells
-cd ~/Desktop/set-up/shells
-git clone https://github.com/infodox/python-pty-shells.git
-
-mkdir ~/Desktop/set-up/priv-esc
-cd ~/Desktop/set-up/priv-esc
-#JAWS is PowerShell script designed to help penetration testers (and CTFers) quickly identify
-#potential privilege escalation vectors on Windows systems. It is written using PowerShell 2.0 
-#so 'should' run on every Windows version since Windows 7.
-git clone https://github.com/411Hall/JAWS.git
-
-git clone https://github.com/DominicBreuker/pspy.git
-
-mkdir ~/Desktop/set-up/exploit
-cd ~/Desktop/set-up/exploit
-
-#eternalBlue
-git clone https://github.com/REPTILEHAUS/Eternal-Blue.git
-
-#Apache Struts CVE-2018-11776
-git clone https://github.com/mazen160/struts-pwn_CVE-2018-11776.git
-
-#SMB BRUTE FORCE
-git clone https://github.com/m4ll0k/smbrute.git
-
-#SSH Username enumeration
-git clone https://github.com/Rhynorater/CVE-2018-15473-Exploit
-
-git clone https://github.com/danielmiessler/SecLists.git
-#Rotten exploit for windows (After enum is done)
-git clone https://github.com/decoder-it/lonelypotato
-
-#Creating exploits unicorn.py
-git clone https://github.com/trustedsec/unicorn.git
-
-mkdir ~/Desktop/set-up/exploit/av_evasion
-cd ~/Desktop/set-up/exploit/av_evasion
-
-#Exploit encoder for AV envasion
-git clone https://github.com/Genetic-Malware/Ebowla.git
-
-mkdir ~/Desktop/set-up/enum
-cd ~/Desktop/set-up/enum
-
-git clone https://github.com/rebootuser/LinEnum.git
-git clone https://github.com/AlessandroZ/BeRoot.git
-git clone https://github.com/jondonas/linux-exploit-suggester-2.git
-git clone https://github.com/sleventyeleven/linuxprivchecker.git
+mkdir ~/Desktop/installs/Windows/enum
+cd ~/Desktop/installs/Windows/enum
 
 #SMB Enum tool
 git clone https://github.com/m8r0wn/nullinux
@@ -99,8 +57,13 @@ git clone https://github.com/m8r0wn/nullinux
 #SSH Enumeration username
 git clone https://github.com/Rhynorater/CVE-2018-15473-Exploit.git
 
-#Framework for windows auth stuff
-git clone https://github.com/SpiderLabs/Responder.git
+mkdir ~/Desktop/installs/Windows/priv-esc
+cd ~/Desktop/installs/Windows/priv-esc
+
+#JAWS is PowerShell script designed to help penetration testers (and CTFers) quickly identify
+#potential privilege escalation vectors on Windows systems. It is written using PowerShell 2.0 
+#so 'should' run on every Windows version since Windows 7.
+git clone https://github.com/411Hall/JAWS.git
 
 #find Vulnerabilities using PS
 git clone https://github.com/rasta-mouse/Sherlock.git
@@ -108,11 +71,64 @@ git clone https://github.com/rasta-mouse/Sherlock.git
 #For the bloodhounds of the world
 pip install neo4j-driver
 git clone https://github.com/BloodHoundAD/BloodHound.git
-git clone https://github.com/BloodHoundAD/BloodHound-Tools.git
+git clone https://github.com/BloodHoundAD/BloodHound-installs.git
+
+mkdir ~/Desktop/installs/Windows/exploits
+cd ~/Desktop/installs/Windows/exploits
+
+#Rotten exploit for windows (After enum is done)
+git clone https://github.com/decoder-it/lonelypotato
+
+#eternalBlue
+git clone https://github.com/REPTILEHAUS/Eternal-Blue.git
+
+
+mkdir ~/Desktop/installs/shells
+cd ~/Desktop/installs/shells
+
+git clone https://github.com/infodox/python-pty-shells.git
+
+mkdir ~/Desktop/installs/Linux
+cd ~/Desktop/installs/Linux
+
+#See process information (Good for cron jobs)
+git clone https://github.com/DominicBreuker/pspy.git
+
+mkdir ~/Desktop/installs/exploits
+cd ~/Desktop/installs/exploits
+
+#Apache Struts CVE-2018-11776
+git clone https://github.com/mazen160/struts-pwn_CVE-2018-11776.git
+
+#SMB BRUTE FORCE
+git clone https://github.com/m4ll0k/smbrute.git
+
+mkdir ~/Desktop/installs/exploit/av_evasion
+cd ~/Desktop/installs/exploit/av_evasion
+
+#Exploit encoder for AV envasion
+git clone https://github.com/Genetic-Malware/Ebowla.git
+
+mkdir ~/Desktop/installs/Linux/enum
+cd ~/Desktop/installs/Linux/enum
+
+#SSH Enumeration username
+git clone https://github.com/Rhynorater/CVE-2018-15473-Exploit.git
+
+git clone https://github.com/rebootuser/LinEnum.git
+git clone https://github.com/AlessandroZ/BeRoot.git
+git clone https://github.com/jondonas/linux-exploit-suggester-2.git
+git clone https://github.com/sleventyeleven/linuxprivchecker.git
+
+
+mkdir ~/Desktop/installs/C2-Frameworks
+cd ~/Desktop/installs/C2-Frameworks
+
+#Creating exploits unicorn.py
+git clone https://github.com/trustedsec/unicorn.git
 
 #Download and install GO: https://golang.org/doc/install
 export PATH=$PATH:/usr/local/go/bin
-cd ~/Desktop/set-up/
 git clone https://github.com/Ne0nd0g/merlin.git
 go get github.com/Ne0nd0g/merlin/pkg
 go get github.com/fatih/color
@@ -123,6 +139,6 @@ go get github.com/fatih/color
 #openssl req -x509 -newkey rsa:4096 -sha256 -nodes -keyout server.key -out server.crt -subj "/CN=arod.com" -days 7
 
 #LAST BUT NOT LEAST
-cd ~/Desktop/set-up/
+cd ~/Desktop/installs/
 
 
