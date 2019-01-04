@@ -6,7 +6,6 @@ apt-get install -y steghide
 apt-get install cifs-utils
 apt-get install smb4k -y
 apt-get install -y proxychains
-wget https://hashcat.net/files/hashcat-2.00.7z
 apt-get install hashcat -y
 apt-get install -y ftp
 apt-get install -y libreoffice
@@ -103,8 +102,8 @@ git clone https://github.com/mazen160/struts-pwn_CVE-2018-11776.git
 #SMB BRUTE FORCE
 git clone https://github.com/m4ll0k/smbrute.git
 
-mkdir ~/Desktop/installs/exploit/av_evasion
-cd ~/Desktop/installs/exploit/av_evasion
+mkdir ~/Desktop/installs/exploits/av_evasion
+cd ~/Desktop/installs/exploits/av_evasion
 
 #Exploit encoder for AV envasion
 git clone https://github.com/Genetic-Malware/Ebowla.git
