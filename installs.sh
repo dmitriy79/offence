@@ -10,7 +10,7 @@ apt-get install hashcat -y
 apt-get install -y ftp
 apt-get install -y libreoffice
 apt-get install -y exiftool
-
+apt install -y snmp-mibs-downloader
 
 mkdir ~/Desktop/installs
 cd ~/Desktop/installs
@@ -118,7 +118,7 @@ git clone https://github.com/rebootuser/LinEnum.git
 git clone https://github.com/AlessandroZ/BeRoot.git
 git clone https://github.com/jondonas/linux-exploit-suggester-2.git
 git clone https://github.com/sleventyeleven/linuxprivchecker.git
-
+git clone https://github.com/trailofbits/onesixtyone
 
 mkdir ~/Desktop/installs/C2-Frameworks
 cd ~/Desktop/installs/C2-Frameworks

