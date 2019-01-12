@@ -70,7 +70,6 @@ git clone https://github.com/rasta-mouse/Sherlock.git
 #For the bloodhounds of the world
 pip install neo4j-driver
 git clone https://github.com/BloodHoundAD/BloodHound.git
-git clone https://github.com/BloodHoundAD/BloodHound-installs.git
 
 mkdir ~/Desktop/installs/Windows/exploits
 cd ~/Desktop/installs/Windows/exploits
