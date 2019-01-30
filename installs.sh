@@ -17,6 +17,12 @@ cd ~/Desktop/installs
 
 git clone https://github.com/CoreSecurity/impacket.git
 
+apt-get install python3-pip
+git clone https://www.github.com/threat9/routersploit
+cd routersploit
+python3 -m pip install -r requirements.txt
+# python3 rsf.py to run the module
+
 mkdir ~/Desktop/installs/wordlist
 cd ~/Desktop/installs/wordlist
 
