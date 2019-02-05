@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 #List all apt-gets
 apt-get install -y gobuster
 apt-get install -y steghide
