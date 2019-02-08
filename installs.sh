@@ -15,6 +15,7 @@ apt install -y snmp-mibs-downloader
 
 mkdir ~/Desktop/installs
 cd ~/Desktop/installs
+wget https://github.com/ZephrFish/static-tools/raw/master/nmap/nmap
 
 git clone https://github.com/CoreSecurity/impacket.git
 
