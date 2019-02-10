@@ -18,6 +18,7 @@ cd ~/Desktop/installs
 wget https://github.com/ZephrFish/static-tools/raw/master/nmap/nmap
 
 git clone https://github.com/CoreSecurity/impacket.git
+git clone https://github.com/sshuttle/sshuttle.git
 
 apt-get install python3-pip
 git clone https://www.github.com/threat9/routersploit
