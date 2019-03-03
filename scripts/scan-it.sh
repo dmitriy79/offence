@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#This script is intended for HTB uses only. Long story short, I got tired of running the same commands over and over.
+#This script is intended for CTF-Style uses only. Long story short, I got tired of running the same commands over and over.
 
 TITLE="[+]You are running this from: $HOSTNAME"
 RIGHT_NOW=$(date +"%x %r %Z")
