@@ -68,6 +68,8 @@ git clone https://github.com/Rhynorater/CVE-2018-15473-Exploit.git
 mkdir ~/Desktop/installs/Windows/priv-esc
 cd ~/Desktop/installs/Windows/priv-esc
 
+git clone https://github.com/bitsadmin/wesng.git
+
 #JAWS is PowerShell script designed to help penetration testers (and CTFers) quickly identify
 #potential privilege escalation vectors on Windows systems. It is written using PowerShell 2.0 
 #so 'should' run on every Windows version since Windows 7.

