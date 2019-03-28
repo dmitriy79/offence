@@ -26,6 +26,11 @@ apt-get install -y ftp
 apt-get install -y libreoffice
 apt-get install -y exiftool
 apt install -y snmp-mibs-downloader
+gem install -r winrm
+pip install pyftpdlib
+apt-get install crackmapexec
+apt-get install -y libssl-dev libffi-dev python-dev build-essential
+pip install crackmapexec
 
 # Making Directories
 mkdir -p /opt/mvv-arod/{Recon,Utils,Frameworks,Windows/{Exploits,Enumeration},Linux{Exploits/Enumeration}}
