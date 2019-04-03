@@ -1,5 +1,5 @@
 #!/bin/bash
-#by 21y4d
+#by mvv-arod
 
 RED='\033[0;31m'
 YELLOW='\033[0;33m'
@@ -27,7 +27,7 @@ exit 1
 header(){
 echo -e ""
 
-if [ "$2" == "All" ]; then
+if [ "$2" == "All" && "$2" == "all" ]; then
 	echo -e "${YELLOW}Running all scans on $1"
 else
 	echo -e "${YELLOW}Running a $2 scan on $1"
@@ -142,7 +142,7 @@ echo -e "${NC}"
 if [ -z `echo "${basicPorts}"` ]; then
         echo -e "${YELLOW}No ports in quick scan.. Skipping!"
 else
-	$nmapType -sCV -p`echo "${basicPorts}"` -oN nmap/Basic_$1.nmap $1 
+	$nmapType -sC -sV -p`echo "${basicPorts}"` -oN nmap/Basic_$1.nmap $1 
 fi
 
 if [ -f nmap/Basic_$1.nmap ] && [[ ! -z `cat nmap/Basic_$1.nmap | grep -w "Service Info: OS:"` ]]; then
@@ -174,9 +174,9 @@ if [ ! -z `echo "${udpPorts}"` ]; then
         echo -e "${YELLOW}Making a script scan on UDP ports: `echo "${udpPorts}" | sed 's/,/, /g'`"
         echo -e "${NC}"
 	if [ -f /usr/share/nmap/scripts/vulners.nse ]; then
-        	$nmapType -sCVU --script vulners --script-args mincvss=7.0 -p`echo "${udpPorts}"` -oN nmap/UDP_$1.nmap $1
+        	$nmapType -sC -sV -sU --script vulners --script-args mincvss=7.0 -p`echo "${udpPorts}"` -oN nmap/UDP_$1.nmap $1
 	else
-        	$nmapType -sCVU -p`echo "${udpPorts}"` -oN nmap/UDP_$1.nmap $1
+        	$nmapType -sC -sV -sU -p`echo "${udpPorts}"` -oN nmap/UDP_$1.nmap $1
 	fi
 fi
 
@@ -340,10 +340,10 @@ for line in $file; do
 		if [[ ! -z `echo "${line}" | grep ssl/http` ]]; then
 			#echo "sslyze --regular $1 | tee recon/sslyze_$1_$port.txt"
 			echo "sslscan $1 | tee recon/sslscan_$1_$port.txt"
-			echo "gobuster -w /usr/share/wordlists/dirb/common.txt -t 30 -k -x $pages -u https://$1:$port -o recon/gobuster_$1_$port.txt"
+			echo "gobuster -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt -t 30 -k -x $pages -u https://$1:$port -o recon/gobuster_$1_$port.txt"
 			echo "nikto -host https://$1:$port -ssl | tee recon/nikto_$1_$port.txt"
 		else
-			echo "gobuster -w /usr/share/wordlists/dirb/common.txt -t 30 -x $pages -u http://$1:$port -o recon/gobuster_$1_$port.txt"
+			echo "gobuster -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt -t 30 -x $pages -u http://$1:$port -o recon/gobuster_$1_$port.txt"
 			echo "nikto -host $1:$port | tee recon/nikto_$1_$port.txt"
 		fi
 		echo ""
@@ -376,7 +376,7 @@ if [[ ! -z `echo "${file}" | grep -w "445/tcp"` ]]; then
 	echo "smbmap -H $1 | tee recon/smbmap_$1.txt"
 	echo "smbclient -L \"//$1/\" -U \"guest\"% | tee recon/smbclient_$1.txt"
 	if [[ $osType == "Windows" ]]; then
-		echo "nmap -Pn -p445 --script vuln -oN recon/SMB_vulns_$1.txt $1"
+		echo "nmap -Pn -p 445 --script vuln -oN recon/SMB_vulns_$1.txt $1"
 	fi
 	if [[ $osType == "Linux" ]]; then
 		echo "enum4linux -a $1 | tee recon/enum4linux_$1.txt"

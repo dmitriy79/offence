@@ -62,7 +62,8 @@ else
 fi
 
 
-
+#java deserial
+git clone https://github.com/frohoff/ysoserial.git
 
 git clone https://github.com/CoreSecurity/impacket.git
 git clone https://github.com/sshuttle/sshuttle.git
@@ -88,7 +89,7 @@ pip install progressbar
 sudo curl https://raw.githubusercontent.com/Paradoxis/StegCracker/master/stegcracker > /bin/stegcracker
 sudo chmod +x /bin/stegcracker
 
-
+wget https://github.com/vulnersCom/nmap-vulners/raw/master/vulners.nse -O /usr/share/nmap/scripts/vulners.nse
 mkdir ~/Desktop/installs/Windows
 cd ~/Desktop/installs/Windows
 
