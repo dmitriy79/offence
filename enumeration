@@ -1,2 +1,5 @@
 #Port Scanning
 masscan -p1-65535,U:1-65535 X.X.X.X --rate=1000 -e tun0
+
+#DNS Enumeration
+wfuzz -H 'HOST: FUZZ.blah.com' -u 'https://<IP>' -w /root/Desktop/installs/wordlist/SecLists/Discovery/DNS/subdomains-top1mil-5000.txt --hw 1
