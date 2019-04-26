@@ -108,6 +108,9 @@ cd ~/Desktop/installs/Linux
 #See process information (Good for cron jobs)
 git clone https://github.com/DominicBreuker/pspy.git
 
+#Monitors and logs user-run commands
+git clone https://github.com/itsKindred/procSpy.git
+
 mkdir ~/Desktop/installs/exploits
 cd ~/Desktop/installs/exploits
 
