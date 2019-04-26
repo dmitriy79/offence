@@ -1,7 +1,21 @@
 #!/bin/bash
 
+# MVV-AROD Toolkit
+
+# Global variables
+BLUE='\033[1;34m'
+YELLOW='\033[1;33m'
+NC='\033[0m'
+
+
+#Updating Kali
+echo -e "${BLUE}Updating Kali.${NC}"
+apt-get update ; apt-get -y upgrade ; apt-get -y dist-upgrade ; apt-get -y autoremove ; apt-get -y autoclean ; echo
 
 #List all apt-gets
+echo -e "${BLUE}Adding useful tools!${NC}"
+echo -e "${BLUE}\n1) gobuster\n2) steghide\n3) cifs-utils\n4) smb4k\n5) proxychains\n6) hashcat\n7) ftp\n8) libreoffice\n9) exiftool\nsnmp-mibs-downloaders\n${NC}"
+
 apt-get install -y gobuster
 apt-get install -y steghide
 apt-get install cifs-utils
@@ -18,9 +32,38 @@ apt-get install crackmapexec
 apt-get install -y libssl-dev libffi-dev python-dev build-essential
 pip install crackmapexec
 
-mkdir ~/Desktop/installs
-cd ~/Desktop/installs
-wget https://github.com/ZephrFish/static-tools/raw/master/nmap/nmap
+# Making Directories
+mkdir -p /opt/mvv-arod/{Recon,Utils,Frameworks,Windows/{Exploits,Enumeration},Linux{Exploits/Enumeration}}
+
+echo -e "${YELLOW}Tools downloaded and Directories made!.${NC}"
+
+# Passive Intelligence Gathering
+echo -e "${YELLOW}Checking for recon tools.${NC}"
+
+
+if [ -d /opt/mvv-arod/Recon/theHarvester/.git ]; then
+     echo -e "${BLUE}Updating theHarvester.${NC}"
+     cd /opt/mvv-arod/Recon/theHarvester ; git pull
+     echo
+else
+  echo -e "${YELLOW}Downloading theHarvester.${NC}"
+  git clone https://github.com/laramies/theHarvester.git /opt/mvv-arod/Reconnaissance/Passive/theHarvester
+  echo
+  echo -e "${YELLOW}Piping Requirements.${NC}"
+  cd /opt/mvv-arod/Recon/theHarvester ; pip install -r requirements.txt
+fi
+
+if [ -d /opt/mvv-arod/Utils/nmap ]; then
+     echo -e "${BLUE}Skipping the nmap stand-alone download..., file is here.${NC}"
+else
+  echo -e "${YELLOW}Downloading the stand-alone nmap stuff.${NC}"
+  wget wget https://github.com/ZephrFish/static-tools/raw/master/nmap/nmap -O /opt/mvv-arod/Utils/nmap
+  echo
+fi
+
+
+#java deserial
+git clone https://github.com/frohoff/ysoserial.git
 
 git clone https://github.com/CoreSecurity/impacket.git
 git clone https://github.com/sshuttle/sshuttle.git
@@ -46,7 +89,7 @@ pip install progressbar
 sudo curl https://raw.githubusercontent.com/Paradoxis/StegCracker/master/stegcracker > /bin/stegcracker
 sudo chmod +x /bin/stegcracker
 
-
+wget https://github.com/vulnersCom/nmap-vulners/raw/master/vulners.nse -O /usr/share/nmap/scripts/vulners.nse
 mkdir ~/Desktop/installs/Windows
 cd ~/Desktop/installs/Windows
 
