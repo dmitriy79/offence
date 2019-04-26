@@ -180,6 +180,8 @@ git clone https://github.com/AlessandroZ/BeRoot.git
 git clone https://github.com/jondonas/linux-exploit-suggester-2.git
 git clone https://github.com/sleventyeleven/linuxprivchecker.git
 git clone https://github.com/trailofbits/onesixtyone
+git clone https://github.com/mzet-/linux-exploit-suggester
+
 
 mkdir ~/Desktop/installs/C2-Frameworks
 cd ~/Desktop/installs/C2-Frameworks
