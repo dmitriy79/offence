@@ -1,9 +1,12 @@
-# Offensive notes and useful stuff :)
+# This is my repository for all things offensives
 
-Series of things used for Hack the Box
+## Notes
+## Scripts
+## Useful Commands
+## Useful Links
 
-Feel free to submit a push.
+Feel free to submit.
 
 - In the "scripts" folder, you will find useful scripts I've used.
-- In the install.sh script, it will pull down all sorts of tools and organize them on your desktop under the "installs" directory.
-- In "useful-commands", you will find syntax that will help with certain actions you may want to do.
+- The setup.sh script installs and configures a Kali box with some of the tools I am comfortable using. They will all reside in the "/opt/arod/" directory.
+- In "useful-commands", you will find syntax that will help with certain actions you may want to do. I use these so often that I keep them there for quick reference. 
