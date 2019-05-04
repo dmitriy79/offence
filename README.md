@@ -1,9 +1,5 @@
 # This is my repository for all things offensives
 
-## Notes
-## Scripts
-## Useful Commands
-## Useful Links
 
 Feel free to submit.
 
