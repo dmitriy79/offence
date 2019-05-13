@@ -1,4 +1,4 @@
-# HTB
+# Offensive notes and useful stuff :)
 
 Series of things used for Hack the Box
 
