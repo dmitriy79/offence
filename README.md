@@ -1,4 +1,4 @@
-# This is my repository for all things offensives
+# This is my repo for all things offensive.
 
 
 Feel free to submit.
