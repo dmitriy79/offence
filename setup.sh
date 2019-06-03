@@ -33,10 +33,10 @@ pip install pyftpdlib
 apt-get install -y crackmapexec
 apt-get install -y libssl-dev libffi-dev python-dev build-essential
 pip install crackmapexec
-wget https://github.com/vulnersCom/nmap-vulners/raw/master/vulners.nse -O /usr/share/nmap/scripts/vulners.nse
+wget https://raw.githubusercontent.com/vulnersCom/nmap-vulners/master/vulners.nse -O /usr/share/nmap/scripts/vulners.nse
 
 # Making Directories
-mkdir -p /opt/arod/{Recon,Utils,Frameworks,Windows/{Exploits,Enumeration},Linux{Exploits/Enumeration}}
+mkdir -p /opt/arod/{Recon,Utils,Frameworks,Windows/{Exploits,Enumeration},Linux/{Exploits/Enumeration}}
 
 echo -e "${YELLOW}Tools downloaded and Directories made!.${NC}"
 
@@ -74,6 +74,7 @@ git clone https://github.com/frohoff/ysoserial.git
 git clone https://github.com/CoreSecurity/impacket.git
 git clone https://github.com/sshuttle/sshuttle.git
 git clone https://github.com/Va5c0/Steghide-Brute-Force-Tool.git
+https://github.com/andrew-d/static-binaries.git
 pip install progressbar
 sudo curl https://raw.githubusercontent.com/Paradoxis/StegCracker/master/stegcracker > /opt/arod/Utils/stegcracker
 git clone https://github.com/Rhynorater/CVE-2018-15473-Exploit.git /opt/arod/Linux/Enumeration/CVE-2018-15473-Exploit
