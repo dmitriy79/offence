@@ -82,7 +82,7 @@ sudo chmod +x /opt/arod/Utils/stegcracker
 git clone https://www.github.com/threat9/routersploit
 cd routersploit
 python3 -m pip install -r requirements.txt # python3 rsf.py to run the module
-
+git clone https://github.com/danielmiessler/SecLists.git /opt/arod/Utils/seclists
 
 echo -e "${YELLOW}\n\nUtilities installed.... Now Windows goodness....\n\n${NC}"
 #ADD the windows poloozaaa
