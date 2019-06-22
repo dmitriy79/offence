@@ -23,10 +23,15 @@ apt-get install -y smb4k
 apt-get install -y proxychains
 apt-get install -y hashcat 
 apt-get install -y ftp
+apt-get install -y rlwrap
 apt-get install -y python3-pip
 apt-get install -y libreoffice
 apt-get install -y exiftool
 apt install -y snmp-mibs-downloader
+curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -
+echo 'deb [arch=amd64] https://download.docker.com/linux/debian buster stable' > /etc/apt/sources.list.d/docker.list
+apt-get update
+apt-get install -y docker-ce
 gem install -r winrm
 pip3 install requests
 pip install pyftpdlib
