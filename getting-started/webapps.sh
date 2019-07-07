@@ -31,7 +31,9 @@ git clone https://github.com/FortyNorthSecurity/EyeWitness.git /opt/webapps/visu
 #use wappalyzer
 
 #Content Discovery
+mkdir /opt/webapps/vuln-scans
 apt-get install -y gobuster
+git clone https://github.com/al0ne/Vxscan.git /opt/webapps/vuln-scans/Vxscan #thnxs nick
 
 #Parameter Discovery
 mkdir /opt/webapps/parameter-discovery
