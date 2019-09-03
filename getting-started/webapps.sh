@@ -35,6 +35,8 @@ mkdir /opt/webapps/vuln-scans
 apt-get install -y gobuster
 git clone https://github.com/al0ne/Vxscan.git /opt/webapps/vuln-scans/Vxscan #thnxs nick
 pip install -r /opt/webapps/vuln-scan/Vxscan/requirements.txt
+gem install wpscan
+wpscan --update
 
 #Parameter Discovery
 mkdir /opt/webapps/parameter-discovery

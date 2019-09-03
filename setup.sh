@@ -38,6 +38,7 @@ pip install pyftpdlib
 apt-get install -y crackmapexec
 apt-get install -y libssl-dev libffi-dev python-dev build-essential
 pip install crackmapexec
+npm install elasticdump -g
 wget https://raw.githubusercontent.com/vulnersCom/nmap-vulners/master/vulners.nse -O /usr/share/nmap/scripts/vulners.nse
 
 # Making Directories
@@ -75,6 +76,7 @@ fi
 #java deserial
 cd /opt/arod/Utils/
 git clone https://github.com/thewhiteh4t/pwnedOrNot.git
+git clone https://github.com/huntergregal/mimipenguin.git
 git clone https://github.com/frohoff/ysoserial.git
 git clone https://github.com/CoreSecurity/impacket.git
 git clone https://github.com/sshuttle/sshuttle.git
